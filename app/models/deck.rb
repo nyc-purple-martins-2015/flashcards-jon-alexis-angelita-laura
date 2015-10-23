@@ -5,7 +5,7 @@ class Deck < ActiveRecord::Base
   has_many :users, through: :rounds
 
   def shuffle
-    @deck.shuffle
+    self.shuffle
   end
 
   def remove_card(card)
@@ -15,11 +15,8 @@ class Deck < ActiveRecord::Base
   end
 
   def is_empty?
-    @deck.count == 0
+    self.count == 0
   end
-end
-
-
-
 
 end
+
