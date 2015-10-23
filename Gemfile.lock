@@ -60,7 +60,7 @@ GEM
     rspec-support (3.3.0)
     shotgun (0.9.1)
       rack (>= 1.0)
-    shoulda-matchers (3.0.0)
+    shoulda-matchers (3.0.1)
       activesupport (>= 4.0.0)
     sinatra (1.4.6)
       rack (~> 1.4)

@@ -1,0 +1,15 @@
+
+<h2>Question:</h2>
+
+<p> <%= @card.question.capitalize %> </p>
+
+<h2>Answer:</h2>
+
+<p> <%= @card.answer.capitalize %>. </p>
+<p> Would you like to see the next question? </p>
+
+<form method = "get" action = "/cards/:id">
+  <div>
+    <input type = "submit" value = "Next">
+  </div>
+</form>
