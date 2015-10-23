@@ -4,7 +4,7 @@ get '/cards/:id' do
 end
 
 post '/cards/:id' do
-  @card = Card.find(params[:card_id])
+  @card = Card.find(params[:id])
   unless  params[:choice].eql?(params[:answer])
     @incorrect = true
     return erb :'card/card_question'

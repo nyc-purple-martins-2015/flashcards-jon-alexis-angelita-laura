@@ -9,9 +9,8 @@
 
 <p> <%= @card.question.capitalize %> </p>
 
-<form method = "post" action = "/cards/:id">
+<form method = "post" action = "/cards/<%= @card.id %>">
 
-  <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
   <input name = "answer" type = "hidden" value = "<%= @card.answer %>"/>
 
   <select name = "choice" value = "possible_answer">

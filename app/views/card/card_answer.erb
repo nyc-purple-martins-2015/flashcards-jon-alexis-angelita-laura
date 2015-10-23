@@ -8,7 +8,7 @@
 <p> <%= @card.answer.capitalize %>. </p>
 <p> Would you like to see the next question? </p>
 
-<form method = "get" action = "/cards/:id">
+<form method = "get" action = "/cards/<%= @card.id %>">
   <div>
     <input type = "submit" value = "Next">
   </div>
