@@ -1,0 +1,19 @@
+<div>
+  <p>Sign up for our awesome game!</p>
+  <% if @user_not_found %>
+
+    <p> Sorry, we have no record of that user existing</p>
+
+  <% end %>
+  <form method = "post" action = "/login">
+    <div>
+      <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
+    </div>
+    <div>
+      <input type = "password" name = "user[password]" placeholder = "password"/>
+    </div>
+    <div>
+      <input type = "submit" value = "sign up"/>
+    </div>
+  </form>
+</div>
