@@ -13,7 +13,8 @@ post '/sign_up' do
   end
 
   if @user.save
-    return "go to profile"
+    login(@user)
+    redirect '/'
   end
 
   "something went wrong"
@@ -24,20 +25,21 @@ get '/login' do
   erb :'user/login'
 end
 
-
-
 post '/login' do
-  @user = User.find_by(username: params[:user][:username])
+  user = User.find_by(username: params[:user][:username])
   @user_not_found = false
 
-  if @user.nil?
+  if user && user.password == params[:user][:password]
+    login(user)
+    redirect '/'
+  else
     @user_not_found = true
-    return erb :'user/login'
+    erb :'user/login'
   end
-
-  if @user.password == params[:user][:password]
-    return "Login!"
-  end
-
-  "error"
 end
+
+get '/logout' do
+  logout!
+  redirect '/'
+end
+
