@@ -9,7 +9,7 @@
   <p>Sign up for our awesome game!</p>
 
   <% if @user_exists %>
-    <p>That username exists already!  Please choose another!</p>
+    <p> The username <%= @user.username %> exists already!  Please choose another!</p>
   <% end %>
 
   <form method = "post" action = "/sign_up">
