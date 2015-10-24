@@ -1,7 +1,7 @@
 get '/cards/:id' do
   @card=Card.find(params[:id])
   erb :'card/card_question'
-end
+end 
 
 post '/cards/:id' do
   @card = Card.find(params[:id])
