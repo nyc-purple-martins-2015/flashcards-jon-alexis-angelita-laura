@@ -7,4 +7,15 @@ helpers do
   def logout!
     session.clear
   end
+
+  def logged_in?
+    !!current_user
+  end
+
+  def current_user
+    if session[:user_id]
+      cur ||= User.find(session[:user_id])
+    end
+    cur
+  end
 end
