@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
   validates :username, presence: true
   validates :password_hash, presence: true
 
-  # include BCrypt
-
   def password
     @password ||= BCrypt::Password.new(password_hash)
   end
