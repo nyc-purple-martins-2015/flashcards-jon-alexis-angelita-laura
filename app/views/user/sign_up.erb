@@ -1,0 +1,26 @@
+<div>
+  <p> Already an existing member?  </p>
+  <form method = "get" action = "/login">
+    <input type = "submit" value = "login" />
+  </form>
+</div>
+<br>
+<div>
+  <p>Sign up for our awesome game!</p>
+
+  <% if @user_exists %>
+    <p>That username exists already!  Please choose another!</p>
+  <% end %>
+
+  <form method = "post" action = "/sign_up">
+    <div>
+      <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
+    </div>
+    <div>
+      <input type = "password" name = "user[password]" placeholder = "password"/>
+    </div>
+    <div>
+      <input type = "submit" value = "sign up"/>
+    </div>
+  </form>
+</div>
