@@ -4,7 +4,7 @@ class Card < ActiveRecord::Base
   has_many :rounds, through: :guesses
 
   validates :question, presence: true
-  validates :answer, :presence: true
+  validates :answer, presence: true
 
 
   def possible_answers
