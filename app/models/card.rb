@@ -4,15 +4,15 @@ class Card < ActiveRecord::Base
   has_many :rounds, through: :guesses
 
   validates :question, presence: true
-  validates :answer, :presence: true
-
+  validates :answer, presence: true
 
   def possible_answers
     [self.answer, self.false_answer_1, self.false_answer_2, self.false_answer_3].shuffle
   end
 
-def update_guess
-  correct = []
+
+  def update_guesses(deck)
+    correct = []
     these_cards = deck
     while these_cards.length > 0
       these_cards.each do |c|
@@ -26,4 +26,5 @@ def update_guess
         end
       end
     end
+  end
 end
