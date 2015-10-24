@@ -13,7 +13,8 @@ post '/sign_up' do
   end
 
   if @user.save
-    return "go to profile"
+    login(@user)
+    redirect '/'
   end
 
   "something went wrong"
