@@ -27,6 +27,17 @@ end
 
 
 post '/login' do
-  # erb :'user/login'
-  "password".password
+  @user = User.find_by(username: params[:user][:username])
+  @user_not_found = false
+
+  if @user.nil?
+    @user_not_found = true
+    return erb :'user/login'
+  end
+
+  if @user.password == params[:user][:password]
+    return "Login!"
+  end
+
+  "error"
 end
