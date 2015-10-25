@@ -1,13 +1,6 @@
 
 <div class="card-content">
 
-  <% if @correct %>
-
-  <p> You are Wrong! Try again! </p>
-
-  <% end %>
-
-
   <h2>Question:</h2>
 
   <p> <%= @card.question.capitalize %> </p>
@@ -32,3 +25,11 @@
   </form>
 
 <a href = "/round-stats"> Quit </a>
+
+
+
+<br>
+<!-- FIXME Link to stats breaks. -->
+<a class="user-links" href = "/round-stats"> Quit </a>
+</div>
+>>>>>>> clean up guess and round logic, clean up cards

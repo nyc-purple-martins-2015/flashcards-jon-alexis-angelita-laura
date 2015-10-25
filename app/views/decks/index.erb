@@ -16,7 +16,9 @@
 <div id="deck-menu">
   <h1 class="user-greeting">My Decks:</h1>
       <% @decks.each do |deck| %>
-          <a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a>
+      <div>
+          <p><a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a></p>
         <br>
+      </div>
       <% end %>
 </div>
