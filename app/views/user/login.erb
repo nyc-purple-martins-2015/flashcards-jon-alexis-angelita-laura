@@ -1,19 +1,26 @@
-<div>
-  <p>Sign up for our awesome game!</p>
+<link href="../public/css/application.css" rel="stylesheet" type="text/css">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
+
+<div class="login-container">
+  <h1 id="signup-welcome">log in to start studying</h1>
+
   <% if @user_not_found %>
-
-    <p> Sorry, either your username or password is wrong</p>
-
+    <p class="error">Sorry, either your username or password is wrong</p>
   <% end %>
+
   <form method = "post" action = "/login">
     <div>
       <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
     </div>
+    <br>
     <div>
       <input type = "password" name = "user[password]" placeholder = "password"/>
     </div>
+    <br>
     <div>
-      <input type = "submit" value = "sign up"/>
+      <input type = "submit" value = "Log In"/>
     </div>
   </form>
 </div>
+

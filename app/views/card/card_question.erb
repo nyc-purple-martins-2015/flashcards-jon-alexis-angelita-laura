@@ -1,3 +1,6 @@
+
+<div class="card-content">
+
 <% if @incorrect %>
 
 <p> You are Wrong! Try again! </p>
@@ -19,9 +22,14 @@
     <% end %>
   </select>
 
+  <br>
+
   <div>
     <input type = "submit" value = "Answer">
   </div>
 </form>
 
-<a href = "/round-stats"> Quit </a>
+<br>
+<!-- FIXME Link to stats breaks. -->
+<a class="user-links" href = "/round-stats"> Quit </a>
+</div>

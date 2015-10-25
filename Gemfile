@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
+gem 'pry'
 
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
