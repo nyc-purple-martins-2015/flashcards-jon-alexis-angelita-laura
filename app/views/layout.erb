@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
+
+  <link href="../public/css/application.css" rel="stylesheet" type="text/css">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -18,6 +14,15 @@
   <title></title>
 </head>
 <body>
+
+<header id="site-header">Flashcards for Study</header>
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sign_up">Sign Up</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+  </nav>
 <div id="content">
   <%= yield %>
 </div>

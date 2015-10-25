@@ -1,4 +1,4 @@
-get '/sign_up' do
+ get '/sign_up' do
   erb :'user/sign_up'
 end
 
@@ -9,16 +9,14 @@ post '/sign_up' do
   if User.find_by(username: @user.username)
     "A user already exists with this username, please choose another"
     @user_exists = true
-    return erb :'user/sign_up'
-  end
 
-  if @user.save
+    erb :'user/sign_up'
+  else
+    @user.save
     login(@user)
+
     redirect '/'
   end
-
-  "something went wrong"
-
 end
 
 get '/login' do
@@ -43,3 +41,10 @@ get '/logout' do
   redirect '/'
 end
 
+get '/users/:id' do
+  @user = User.find_by(id: params[:id])
+  @round = Round.find_by(id: session[:round_id])
+  # @total_first = @round.total_first_guesses
+  # @deck = Deck.find_by(id: @round.deck_id)
+  erb :'user/show'
+end

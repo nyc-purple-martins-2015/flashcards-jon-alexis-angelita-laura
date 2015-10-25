@@ -1,11 +1,22 @@
-<% if session[:user_id]  %>
-  <h1>Welcome back <%= session[:user_name] %>! </h1>
-  <a href="/logout">logout</a>
-<% else %>
-  <a href="/sign_up">sign up</a>
-  <a href="/login">login</a>
-<% end %>
+<div>
+  <% if session[:user_id]  %>
 
-<% @decks.each do |deck| %>
-<p><a href="/decks/<%=deck.id %>"><%= deck.category %></a><p>
-<% end %>
+    <div class="user-greeting">
+    <h1>Welcome back <%= session[:user_name] %>! </h1>
+    <br>
+    <a id="user-logout" href="/logout" >Log Me Out</a>
+    </div>
+
+    <% else %>
+    <h2> Welcome, please sign up. </h2>
+    <% end %>
+</div>
+
+
+<div id="deck-menu">
+  <h1 class="user-greeting">My Decks:</h1>
+      <% @decks.each do |deck| %>
+          <a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a>
+        <br>
+      <% end %>
+</div>
