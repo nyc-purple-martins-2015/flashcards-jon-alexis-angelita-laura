@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<header id="site-header">Flashcards for Study</header>
+<header id="site-header">FLASHCARDS</header>
   <nav>
     <ul class="navbar">
 
@@ -26,6 +26,7 @@
       <li><a href="/login">Login</a></li>
       <% else %>
       <li><a href="/logout">Logout</a></li>
+      <li><a href="/users/<%=current_user.id %>"><%= current_user.username %></a><li>
       <% end %>
     </ul>
   </nav>
