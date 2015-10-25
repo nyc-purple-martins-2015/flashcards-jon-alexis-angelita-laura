@@ -14,7 +14,7 @@ class Round < ActiveRecord::Base
     current_cards = self.deck.cards
     current_cards.each do |card|
       guesses_for_card = count_guesses(card)
-      first_try += 1 if guesses_for_card == 1 && @correct
+      first_try += 1 if guesses_for_card == 1 && @correct = true
     end
     return first_try
   end

@@ -2,8 +2,6 @@ f1 = "false_answer_1"
 f2 = "false_answer_2"
 f3 = "false_answer_3"
 
-jon = User.create({:username=> 'jonathan', :password => 'password'})
-j_round = Round.create({:user_id=> 1, deck_id: 1})
 deck = Deck.create({:category=>'cats'})
 
 deck_2 = Deck.create({:category=> 'Spookey Halloween'})
