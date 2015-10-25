@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<div>
-  <div class="login-container">
-    <h1> Already an existing member?  </h1>
-    <form method = "get" action = "/login">
-      <input type = "submit" value = "login" />
-    </form>
-  </div>
-</div>
-
-<br>
-
-<div class="login-container">
-  <h1 id="signup-welcome">Sign up for our awesome game!</h1>
-
-  <% if @user_exists %>
-=======
 <link href="../public/css/application.css" rel="stylesheet" type="text/css">
 </head>
 <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
@@ -23,46 +6,24 @@
   <h1 id="signup-welcome"> Sign up to start studying</h1>
 
  <% if @user_exists %>
->>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377
     <p> The username <%= @user.username %> exists already!  Please choose another!</p>
   <% end %>
   <div>
 
 
-    <form method = "post" action = "/sign_up">
-      <div>
-        <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
-      </div>
-      <br>
-      <div>
-        <input type = "password" name = "user[password]" placeholder = "password"/>
-      </div>
-      <br>
-      <div>
-        <input type = "submit" value = "Sign Up"/>
-      </div>
-    </form>
-  </div>
-
-  <a href="/login"> Already an existing member? </a>
-
-
-
-
-
-
-<<<<<<< HEAD
   <form method = "post" action = "/sign_up">
     <div>
       <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
     </div>
+    <br>
     <div>
       <input type = "password" name = "user[password]" placeholder = "password"/>
     </div>
+    <br>
     <div>
-      <input type = "submit" value = "sign up"/>
+      <input type = "submit" value = "Sign Up"/>
     </div>
   </form>
 </div>
-=======
->>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377
+
+<a href="/login"> Already an existing member? </a>
