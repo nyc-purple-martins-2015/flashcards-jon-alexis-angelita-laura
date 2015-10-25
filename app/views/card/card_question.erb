@@ -1,50 +1,40 @@
 
 <div class="card-content">
 
-<% if @correct %>
+  <% if @correct %>
 
-<p> You are Wrong! Try again! </p>
+  <p> You are Wrong! Try again! </p>
 
-<% end %>
-
-
-<h2>Question:</h2>
-
-<p> <%= @card.question.capitalize %> </p>
-
-<form method = "post" action = "/guesses">
-
-  <input name = "answer" type = "hidden" value = "<%= @card.answer %>"/>
-  <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
+  <% end %>
 
 
-  <select name = "choice" value = "possible_answer">
-    <% @card.possible_answers.each do |possible_answer| %>
-    <option value = "<%= possible_answer %>"> <%= possible_answer.capitalize %> </option>
-    <% end %>
-  </select>
+  <h2>Question:</h2>
+
+  <p> <%= @card.question.capitalize %> </p>
+
+  <form method = "post" action = "/guesses">
+
+    <input name = "answer" type = "hidden" value = "<%= @card.answer %>"/>
+    <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
+
+
+    <select name = "choice" value = "possible_answer">
+      <% @card.possible_answers.each do |possible_answer| %>
+      <option value = "<%= possible_answer %>"> <%= possible_answer.capitalize %> </option>
+      <% end %>
+    </select>
+
+    <br>
+
+    <div>
+      <input type = "submit" value = "Answer">
+    </div>
+  </form>
+
+
 
   <br>
-
-  <div>
-    <input type = "submit" value = "Answer">
-  </div>
-</form>
-
-<<<<<<< HEAD
-<a href = "/round-stats"> Quit </a>
-=======
-
-
-<br>
-<!-- FIXME Link to stats breaks. -->
-<a class="user-links" href = "/round-stats"> Quit </a>
+  <!-- FIXME Link to stats breaks. -->
+  <a class="user-links" href = "/round-stats"> Quit </a>
 </div>
-<<<<<<< HEAD
 
-<form method="get" action = "/users/:id/stats">
-  <input type = "submit" value = "End Round" />
-</form>
->>>>>>> 08e9031c5d7b722bb02b521110e735a60cc8cc66
-=======
->>>>>>> c4a447f4a64c970f37eda7206fd8d69f6a7c2df6
