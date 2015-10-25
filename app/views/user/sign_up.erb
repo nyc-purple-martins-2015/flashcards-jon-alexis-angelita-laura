@@ -1,18 +1,5 @@
 <div>
-<<<<<<< HEAD
-  <div class="login-container">
-    <h1> Already an existing member?  </h1>
-    <form method = "get" action = "/login">
-      <input type = "submit" value = "login" />
-    </form>
-  </div>
-</div>
 
-<br>
-
-<div class="login-container">
-  <h1 id="signup-welcome">Sign up for our awesome game!</h1>
-=======
   <p> Already an existing member?  </p>
   <form method = "get" action = "/login">
     <input type = "submit" value = "login" />
@@ -21,7 +8,6 @@
 <br>
 <div>
   <p>Sign up for our awesome game!</p>
->>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
 
   <% if @user_exists %>
     <p> The username <%= @user.username %> exists already!  Please choose another!</p>
@@ -31,17 +17,11 @@
     <div>
       <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
     </div>
-<<<<<<< HEAD
     <br>
     <div>
       <input type = "password" name = "user[password]" placeholder = "password"/>
     </div>
     <br>
-=======
-    <div>
-      <input type = "password" name = "user[password]" placeholder = "password"/>
-    </div>
->>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
     <div>
       <input type = "submit" value = "sign up"/>
     </div>
