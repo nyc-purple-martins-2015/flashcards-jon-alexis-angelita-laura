@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -18,10 +18,15 @@
 <header id="site-header">Flashcards for Study</header>
   <nav>
     <ul class="navbar">
-      
+
       <li><a href="/">Home</a></li>
+
+      <% if !logged_in? %>
       <li><a href="/sign_up">Sign Up</a></li>
       <li><a href="/login">Login</a></li>
+      <% else %>
+      <li><a href="/logout">Logout</a></li>
+      <% end %>
     </ul>
   </nav>
 <div id="content">
