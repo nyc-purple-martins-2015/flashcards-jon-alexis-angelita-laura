@@ -7,7 +7,7 @@ deck = Deck.create({:category=>'cats'})
 deck_2 = Deck.create({:category=> 'Spookey Halloween'})
 
 c_card_1 = Card.create({:question => 'How many cats are the best?', :answer => 'all of them', false_answer_1: f1, false_answer_2: f2, false_answer_3: f3,  :deck_id => 1})
-our_guess = Guess.create({:card_id=>1,:round_id=>1, :attempts=>1, :solved=> false})
+
 
 c_card_2 = Card.create({:question => 'What cat name is the best?', :answer => 'All of Them', false_answer_1: 'Sylvester', false_answer_2: 'Tom', false_answer_3: 'Garfield',  :deck_id => 1})
 
