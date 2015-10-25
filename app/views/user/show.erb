@@ -10,8 +10,8 @@
     <p>Last Seen:<%= @user.updated_at.strftime("%m/%d/%Y") %> </p>
     <p>Rounds played: <%= @user.rounds.all.count %> </p>
 <!--     FIXME: logic for guesses breaks, update when fixed.
- -->    <p>Overall accuracy:<%=%> </p>
-    <p>Percent correct:<%=%> </p>
-    <p>Percent incorrect:<%=%> </p>
+ -->    <p>Overall accuracy:<%= %> </p>
+    <p>Percent correct:<%= %> </p>
+    <p>Percent incorrect:<%= %> </p>
   </div>
 </div>
