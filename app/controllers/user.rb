@@ -42,9 +42,10 @@ get '/logout' do
 end
 
 get '/users/:id' do
-  @user = User.find_by(id: params[:id])
-  @total_first = @round.total_first_guesses
-  #TODO: add appropriate working guess logic/stats here
+  @user = User.find_by(id: session[:user_id])
+  @rounds = @user.rounds
+  # @total_first = @round.total_first_guesses
+  # #TODO: add appropriate working guess logic/stats here
   erb :'user/show'
 end
 
