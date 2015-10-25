@@ -1,18 +1,16 @@
 <h2> We hope you enjoyed playing <%= @deck.category%>!</h2>
 
-Great job! You answered <%=@total_first%> / correctly on the first try!
+<h3> Great job! You answered <%=@total_first%> / <%= @deck.cards.count %> correctly on the first try! </h3>
 
-
-
-
-
-
-
-
-
-
+<h3> You made <%= @round.guesses.count %> guesses overall! </h3>
 
 <h2> Would you like to play again? </h2>
+<div>
+<h3><a href = "/decks/<%= @deck.id %>"> Play <%= @deck.category %> again! </a></h3>
+</div>
 
+<br>
 
-<a href = "/"> No, Thanks! </a>
+<div>
+<h3><a href = "/"> No, Thanks! </a></h3>
+</div>
