@@ -8,7 +8,7 @@
   <p> You will be presented with a question.  Your job is to answer to the best of your ability and precisely as possible. If you get it CORRECT, you will be directed to the next question. If you answer INCORRECTLY, you'll be shown the correct answer. The game will continue until all of the cards have been answered correctly! Good luck and have fun, ghouls </p>
 
   <p> Press 'play' when you are ready to proceed! </p>
-    <a href="/cards/<%= @card.id %>"> PLAY </a>
+    <a href="/round/<%= @round.id %>/cards/<%= @card.id %>"> PLAY </a>
 
   <% else %>
     <p> Please <a href="/login"> log in </a> or <a href="/signup">create an account</a> to view this page <p>

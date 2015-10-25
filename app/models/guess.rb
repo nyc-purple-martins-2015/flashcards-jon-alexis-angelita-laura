@@ -4,6 +4,4 @@ class Guess < ActiveRecord::Base
   has_one :deck, through: :card
   has_one :user, through: :round
 
-
-
 end
