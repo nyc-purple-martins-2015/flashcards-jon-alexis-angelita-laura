@@ -5,6 +5,10 @@ class Round < ActiveRecord::Base
   has_many :guesses
   has_many :cards, through: :guesses
 
+  def done_cards
+    guesses.where(solved: true).map { |guess| guess.card }
+  end
+  
   def total_first_guesses
     first_try = 0
     current_cards = self.deck.cards
@@ -23,6 +27,7 @@ class Round < ActiveRecord::Base
   def count_guesses(card) #keeps track of the num of guesses for that card in that round
     card.guesses.where(round: self.id).count
   end
+
 
 
 end

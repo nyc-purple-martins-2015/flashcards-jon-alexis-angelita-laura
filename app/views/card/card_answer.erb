@@ -1,16 +1,26 @@
 <div class="card-content">
 
+<% if @correct %>
+<p> Great job, you got it! </p>
+<% else %>
+<p> The answer you gave was wrong. Don't worry though, you'll get another chance to answer it correctly! </p>
+<%end%>
+
+
 <h2>Question:</h2>
 
 <p> <%= @card.question.capitalize %> </p>
 
-<h2>Answer:</h2>
+<h2> Your answer: </h2>
+<p> <%= @input %>
+
+<h2>Correct answer:</h2>
 
 <p> <%= @card.answer.capitalize %>. </p>
 <p> Would you like to see the next question? </p>
 
 <div>
-<a href = "/round/<%=@round.id %>/cards/<%=@card.id %>"> Next question! </a>
+<a href = "/round/<%=@round.id %>/cards/<%=@next_card.id %>"> Next question! </a>
 </div>
 
 </div>
