@@ -1,13 +1,24 @@
 
 <div class="card-content">
 
+<<<<<<< HEAD
   <% if @correct %>
 
   <p> You are Wrong! Try again! </p>
 
   <% end %>
+=======
+  <h2>Question:</h2>
 
+  <p> <%= @card.question.capitalize %> </p>
 
+  <form method = "post" action = "/guesses">
+>>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377
+
+    <input name = "answer" type = "hidden" value = "<%= @card.answer %>"/>
+    <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
+
+<<<<<<< HEAD
   <h2>Question:</h2>
 
   <p> <%= @card.question.capitalize %> </p>
@@ -18,11 +29,15 @@
     <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
 
 
+=======
+
+>>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377
     <select name = "choice" value = "possible_answer">
       <% @card.possible_answers.each do |possible_answer| %>
       <option value = "<%= possible_answer %>"> <%= possible_answer.capitalize %> </option>
       <% end %>
     </select>
+<<<<<<< HEAD
 
     <br>
 
@@ -30,8 +45,15 @@
       <input type = "submit" value = "Answer">
     </div>
   </form>
+=======
+>>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377
 
+    <br>
 
+    <div>
+      <input type = "submit" value = "Answer">
+    </div>
+  </form>
 
   <br>
   <!-- FIXME Link to stats breaks. -->

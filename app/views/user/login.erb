@@ -3,12 +3,14 @@
 <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
 
 <div class="login-container">
-  <h1 id="signup-welcome">log in to start studying</h1>
+  <h1 id="signup-welcome">Log in to start studying</h1>
 
   <% if @user_not_found %>
-    <p class="error">Sorry, either your username or password is wrong</p>
+  <p class="error">Sorry, either your username or password is wrong</p>
   <% end %>
+  <div>
 
+<<<<<<< HEAD
   <form method = "post" action = "/login">
     <div>
       <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
@@ -23,3 +25,22 @@
   </form>
 </div>
 
+=======
+
+    <form method = "post" action = "/login">
+      <div>
+        <input type = "text" name = "user[username]" placeholder = "Joe Schomoe"/>
+      </div>
+      <br>
+      <div>
+        <input type = "password" name = "user[password]" placeholder = "password"/>
+      </div>
+      <br>
+      <div>
+        <input type = "submit" value = "Log In"/>
+      </div>
+    </form>
+  </div>
+
+  <a href="/sign_up"> Sign Up! </a>
+>>>>>>> 02a3291904fbd65c8344747b9bc26d66aedf6377

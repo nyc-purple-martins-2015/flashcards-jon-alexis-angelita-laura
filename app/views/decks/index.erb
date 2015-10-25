@@ -1,14 +1,13 @@
 <div>
-  <% if session[:user_id]  %>
+  <% if logged_in?  %>
 
     <div class="user-greeting">
     <h1>Welcome back <%= session[:user_name] %>! </h1>
     <br>
-    <a id="user-logout" href="/logout" >Log Me Out</a>
     </div>
 
     <% else %>
-    <h2> Welcome, please sign up. </h2>
+    <h2 class = "home-sign-up"> Welcome, please <a href = "/sign_up"> sign up </a> to play. </h2>
     <% end %>
 </div>
 
@@ -16,7 +15,9 @@
 <div id="deck-menu">
   <h1 class="user-greeting">My Decks:</h1>
       <% @decks.each do |deck| %>
-          <a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a>
+      <div>
+          <p><a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a></p>
         <br>
+      </div>
       <% end %>
 </div>
