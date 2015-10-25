@@ -9,9 +9,8 @@
 <p> <%= @card.answer.capitalize %>. </p>
 <p> Would you like to see the next question? </p>
 
-<form method = "get" action = "/cards/<%= @card.id %>">
-  <div>
-    <input type = "submit" value = "Next">
-  </div>
-</form>
+<div>
+<a href = "/round/<%= @round.id %>/cards/<%= @card.id %>"> Next question! </a>
+</div>
+
 </div>
