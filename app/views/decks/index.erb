@@ -2,7 +2,7 @@
   <% if logged_in?  %>
 
     <div class="user-greeting">
-    <h1>Welcome back <%= session[:user_name] %>! </h1>
+    <h1>Welcome, <%= session[:user_name] %>! </h1>
     <br>
     </div>
 
@@ -13,7 +13,7 @@
 
 
 <div id="deck-menu">
-  <h1 class="user-greeting">My Decks:</h1>
+  <h1 class="user-greeting">Categories:</h1>
       <% @decks.each do |deck| %>
       <div>
           <p><a class="deck-display" href="/decks/<%=deck.id %>"><%= deck.category %></a></p>
