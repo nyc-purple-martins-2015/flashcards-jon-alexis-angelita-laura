@@ -13,10 +13,14 @@
     <p>Last Seen:<%= @user.updated_at.strftime("%m/%d/%Y") %> </p>
     <p>Rounds played: <%= @user.rounds.all.count %> </p>
     <p>Deck name:<% @rounds.each do |round|%>
-    <%= round.deck.category  %>
-    <p>Overall accuracy:<%= round.guesses.count / round.deck.cards.count %> </p>
-    <p>Percent correct:<%= %> </p>
-    <p>Percent incorrect:<%= %> </p>
+      <h3><%= round.deck.category  %> </h3>
+      <p> Date Played: <%= round.deck.created_at.strftime("%m/%d/%Y") %></p>
+      <p> Number of cards in Deck: <%= round.deck.cards.count %> </p>
+      <p> First Attempts Correct: <%= round.total_first_guesses %> </p>
+      <p> Total Guesses: <%= round.guesses.count %>
+
     <% end %> </p>
   </div>
 </div>
+
+
