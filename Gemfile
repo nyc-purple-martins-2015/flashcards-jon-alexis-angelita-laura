@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
+
 
 # PostgreSQL driver
 gem 'pg'
@@ -7,6 +9,7 @@ gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
+
 gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt'
@@ -14,7 +17,6 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
-gem 'pry'
 
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
