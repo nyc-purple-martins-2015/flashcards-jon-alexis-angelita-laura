@@ -14,15 +14,15 @@ class Card < ActiveRecord::Base
   def update_guesses(deck)
     correct = []
     these_cards = deck
-    while these_cards.length > 0
+    while these_cards.count > 0
       these_cards.each do |c|
         if @choice == c.answer
-          guess.solved = true
-          guess.attempts += 1
+          c.guesses.solved = true
+          # c.guesses.attempts += 1
           correct << c
           these_cards.delete(c)
-        else
-          guess.attempts += 1
+        # else
+        # c.guesses.attempts += 1
         end
       end
     end
