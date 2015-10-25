@@ -3,6 +3,8 @@
 <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
 
 
+
+
 <div class="stats-container">
   <h1 id="profile-header"><%= session[:user_name] %>'s Profile</h1>
   <div class="stats">
@@ -10,9 +12,11 @@
     <p>Registered since: <%= @user.created_at.strftime("%m/%d/%Y") %></p>
     <p>Last Seen:<%= @user.updated_at.strftime("%m/%d/%Y") %> </p>
     <p>Rounds played: <%= @user.rounds.all.count %> </p>
-<!--     FIXME: logic for guesses breaks, update when fixed.
- -->    <p>Overall accuracy:<%= %> </p>
+    <p>Deck name:<% @rounds.each do |round|%>
+    <%= round.deck.category  %>
+    <p>Overall accuracy:<%= round.guesses.count / round.deck.cards.count %> </p>
     <p>Percent correct:<%= %> </p>
     <p>Percent incorrect:<%= %> </p>
+    <% end %> </p>
   </div>
 </div>
