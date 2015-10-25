@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  get '/sign_up' do
+=======
+get '/sign_up' do
+>>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
   erb :'user/sign_up'
 end
 
@@ -9,6 +13,7 @@ post '/sign_up' do
   if User.find_by(username: @user.username)
     "A user already exists with this username, please choose another"
     @user_exists = true
+<<<<<<< HEAD
 
     erb :'user/sign_up'
   else
@@ -17,6 +22,18 @@ post '/sign_up' do
 
     redirect '/'
   end
+=======
+    return erb :'user/sign_up'
+  end
+
+  if @user.save
+    login(@user)
+    redirect '/'
+  end
+
+  "something went wrong"
+
+>>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
 end
 
 get '/login' do
@@ -41,9 +58,12 @@ get '/logout' do
   redirect '/'
 end
 
+<<<<<<< HEAD
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
   @total_first = @round.total_first_guesses
   #TODO: add appropriate working guess logic/stats here
   erb :'user/show'
 end
+=======
+>>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
