@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
   <% if session[:user_id]  %>
 
@@ -20,3 +21,16 @@
         <br>
       <% end %>
 </div>
+=======
+<% if session[:user_id]  %>
+  <h1>Welcome back <%= session[:user_name] %>! </h1>
+  <a href="/logout">logout</a>
+<% else %>
+  <a href="/sign_up">sign up</a>
+  <a href="/login">login</a>
+<% end %>
+
+<% @decks.each do |deck| %>
+<p><a href="/decks/<%=deck.id %>"><%= deck.category %></a><p>
+<% end %>
+>>>>>>> 7479c5cc64202033b8c431014c65a36d5d3fdd27
