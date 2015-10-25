@@ -5,10 +5,6 @@ class Card < ActiveRecord::Base
 
   validates :question, presence: true
   validates :answer, presence: true
-<<<<<<< HEAD
-
-=======
->>>>>>> 08e9031c5d7b722bb02b521110e735a60cc8cc66
 
   def possible_answers
     [self.answer, self.false_answer_1, self.false_answer_2, self.false_answer_3].shuffle
