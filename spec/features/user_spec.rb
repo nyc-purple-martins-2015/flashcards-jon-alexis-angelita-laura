@@ -6,5 +6,4 @@ describe 'User' do
     expect(steffi.password).to eq("stef")
     expect(steffi.password.to_s).to_not eq('stef')
   end
-
 end

@@ -7,16 +7,5 @@ class Deck < ActiveRecord::Base
   def shuffle_deck
     self.shuffle
   end
-
-  # def remove_card(card)
-  #   if @correct 
-  #     card.destroy
-  #   end
-  # end
-
-  # def is_empty?
-  #   self.count == 0
-  # end
-
 end
 

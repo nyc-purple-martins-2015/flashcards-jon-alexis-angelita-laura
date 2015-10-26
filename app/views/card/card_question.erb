@@ -10,7 +10,6 @@
     <input name = "answer" type = "hidden" value = "<%= @card.answer %>"/>
     <input name = "card_id" type = "hidden" value = "<%= @card.id %>"/>
 
-
     <select name = "choice" value = "possible_answer">
       <% @card.possible_answers.each do |possible_answer| %>
       <option value = "<%= possible_answer %>"> <%= possible_answer.capitalize %> </option>
@@ -24,8 +23,6 @@
     </div>
   </form>
 
-<br>
-<!-- FIXME Link to stats breaks. -->
-<a class="user-links" href = "/round-stats"> Quit </a>
+  <br>
+  <a class="user-links" href = "/round-stats"> Quit </a>
 </div>
-
